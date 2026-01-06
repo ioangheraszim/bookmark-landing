@@ -19,20 +19,20 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- View the optimal layout for the site depending on their device's screen size ✅
+- See hover states for all interactive elements on the page ✅
 - Receive an error message when the newsletter form is submitted if:
-  - The input field is empty
-  - The email address is not formatted correctly
+  - The input field is empty ✅
+  - The email address is not formatted correctly ✅
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot/screenshot.gif)
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/ioangheraszim/bookmark-landing)
+- Live Site URL: [Live site URL here](https://ioangheraszim.github.io/bookmark-landing/)
 
 ## My process
 
@@ -51,5 +51,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [portfolio](https://ioangheraszim.github.io/portofolio/)
 - Frontend Mentor - [@ioangheraszim](https://www.frontendmentor.io/profile/ioangheraszim)
