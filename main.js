@@ -14,6 +14,7 @@ function handleData(index) {
 
   const featureTitle = document.getElementById("feature-title");
   const featureSubtitle = document.getElementById("feature-subtitle");
+  const myImg = document.getElementById("my-img");
 
   featureTitle.classList.add("opacity-0");
   featureSubtitle.classList.add("opacity-0");
@@ -21,6 +22,7 @@ function handleData(index) {
   setTimeout(() => {
     featureTitle.textContent = myData.title;
     featureSubtitle.textContent = myData.description;
+    myImg.src = myData.img;
 
     featureTitle.classList.remove("opacity-0");
     featureTitle.classList.add("opacity-100");
