@@ -11,16 +11,16 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
-    <script defer src="./main.js"></script>
+    <script defer type="module" src="./main.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
-  <body class="font-rubik bg-background">
-    <header class="container mx-auto px-8 relative w-full">
+  <body class="font-rubik bg-background text-primaryDark">
+    <header class="container mx-auto py-3 px-8 relative w-full">
       <nav class="flex justify-between items-center py-10">
-        <img src="./assets/images/logo-bookmark.svg" alt="logo bookmark" />
+        <img src="./assets/images/logo-bookmark.svg" alt="Bookmark" />
         <ul
-          class="absolute top-0 left-0 w-full min-h-svh bg-primaryDark opacity-[0.9] uppercase px-4 py-10 md:py-0 tracking-[4px] text-white text-lg md:text-sm translate-y-[-100%] transition-opacity md:static md:w-auto md:min-h-0 md:bg-transparent md:flex md:items-center md:flex-row md:translate-y-0 md:text-primaryDark"
+          class="absolute top-0 left-0 w-full min-h-svh bg-primaryDark opacity-[0.9] uppercase px-4 py-10 md:py-0 tracking-[4px] text-background text-lg md:text-sm translate-y-[-100%] transition-opacity md:static md:w-auto md:min-h-0 md:bg-transparent md:flex md:items-center md:flex-row md:translate-y-0 md:text-primaryDark"
         >
           <li
             class="flex items-center justify-between pb-10 border-b-2 md:hidden"
@@ -28,24 +28,24 @@
             <img src="./assets/images/logo-bookmark.svg" alt="" />
             <button><img src="./assets/images/icon-close.svg" alt="" /></button>
           </li>
-          <li class="border-b-2 md:border-none md:mx-2">
+          <li class="border-b-2 md:border-none md:mx-2 hover:text-accent">
             <a class="block w-full text-center py-4 md:py-2" href="#"
               >Features</a
             >
           </li>
-          <li class="border-b-2 md:border-none md:mx-2">
+          <li class="border-b-2 md:border-none md:mx-2 hover:text-accent">
             <a class="block w-full text-center py-4 md:py-2" href="#"
               >Pricing</a
             >
           </li>
-          <li class="border-b-2 md:border-none md:mx-2">
+          <li class="border-b-2 md:border-none md:mx-2 hover:text-accent">
             <a class="block w-full text-center py-4 md:py-2" href="#"
               >Contact</a
             >
           </li>
           <li class="ml-10">
             <a
-              class="block w-full text-center border-2 md:border-none my-8 py-2 md:my-0 md:bg-accent md: px-4 md:rounded text-white"
+              class="block w-full text-center border-2 md:border-none my-8 py-2 md:my-0 md:bg-accent md: px-4 md:rounded text-background hover:outline hover:outline-1 hover:outline-accent hover:text-accent hover:bg-background transition-colors duration-200 ease-in-out"
               href="#"
               >Login</a
             >
@@ -66,36 +66,42 @@
     </header>
     <main>
       <section
-        class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center mb-16"
+        class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center mb-16 sm:mb-16 sm:px-8 md:gap-20 md:mt-12"
       >
-        <div class="px-2">
-          <h1 class="text-3xl text-center py-3.5 leading-snug">
+        <div class="text-center sm:text-start px-2 sm:px-3 md:w-1/2">
+          <h1 class="text-3xl sm:font-semibold sm:text-5xl py-3.5 leading-snug">
             A Simple Bookmark Manager
           </h1>
-          <p class="text-center px-5 text-base text-primaryDark opacity-75">
+          <p class="text-base text-primaryDark sm:text-xl opacity-75">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free
           </p>
-          <div class="flex justify-between px-6 my-8 md:justify-center">
+          <div class="flex justify-between px-6 sm:px-0 my-8 md:justify-start">
             <button
-              class="bg-primary p-3 rounded text-background sm:mr-5 shadow-lg hover:shadow-primaryDark"
+              class="bg-primary p-3 sm:px-5 rounded text-background sm:mr-5 shadow-lg outline outline-1 hover:outline-primary hover:text-primary hover:bg-background transition-colors duration-200 ease-in-out"
             >
               Get it on Chrome
             </button>
-            <button class="p-3 rounded shadow-lg hover:shadow-primary">
+            <button
+              class="p-3 sm:px-5 rounded shadow-lg hover:outline hover:outline-1 hover:outline-primaryDark transition-colors duration-200 ease-in-out"
+            >
               Get it on Firefox
             </button>
           </div>
         </div>
-        <div class="my-10 px-3">
+        <div class="my-10 px-3 md:w-1/2 md:flex md:justify-end">
           <img src="./assets/images/illustration-hero.svg" alt="" />
         </div>
       </section>
-      <section class="container mx-auto px-2">
-        <div class="flex items-center flex-col mb-14">
-          <h2 class="text-2xl font-semibold mt-14 mb-2">Features</h2>
-          <p class="px-4 pt-2 text-center">
+      <section class="container mx-auto px-2 sm:px-8">
+        <div
+          class="flex items-center flex-col mb-14 text-center sm:max-w-[645px] sm:mx-auto"
+        >
+          <h2 class="text-2xl sm:text-3xl font-semibold mt-14 mb-2">
+            Features
+          </h2>
+          <p class="px-4 pt-2 text-center sm:text-xl sm:px-5 opacity-50">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -106,46 +112,65 @@
           class="flex flex-col md:flex-row items-center my-10 justify-between mx-auto md:w-[700px]"
         >
           <button
-            class="tab-btn text-center w-full text-lg px-4 pb-3 md:py-4 border-b-[1px] border-gray-300 relative"
+            class="tab-btn text-center w-full text-lg px-4 pb-3 md:py-4 border-b-[1px] border-gray-300 relative hover:text-accent transition-colors duration-200 ease-in-out"
           >
             Simple Bookmarking
           </button>
           <button
-            class="tab-btn text-center w-full text-lg px-4 py-4 border-b-[1px] border-gray-300 relative"
+            class="tab-btn text-center w-full text-lg px-4 py-4 border-b-[1px] border-gray-300 relative hover:text-accent transition-colors duration-200 ease-in-out"
           >
             Speedy Searching
           </button>
           <button
-            class="tab-btn text-center w-full text-lg px-4 py-3.5 md:py-4 border-b-[1px] border-gray-300 relative"
+            class="tab-btn text-center w-full text-lg px-4 py-3.5 md:py-4 border-b-[1px] border-gray-300 relative hover:text-accent transition-colors duration-200 ease-in-out"
           >
             Easy Sharing
           </button>
         </div>
-        <div class="">
+        <div class="sm:flex sm:justify-between sm:items-center w-full sm:pt-12">
           <img src="./assets/images/illustration-features-tab-1.svg" alt="" />
-          <div class="text-center">
-            <h3 class="text-2xl font-semibold mt-20">Bookmark in one click</h3>
-            <p class="mt-3 px-4">
+          <div class="text-center sm:text-start sm:max-w-[500px]">
+            <h3
+              id="feature-title"
+              class="text-2xl font-semibold mt-20 sm:mt-auto sm:text-3xl opacity-100 transition-opacity duration-300"
+            >
+              Bookmark in one click
+            </h3>
+            <p
+              id="feature-subtitle"
+              class="mt-3 px-4 sm:p-0 sm:text-xl opacity-50 transition-opacity duration-300"
+            >
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
             </p>
+            <div class="hidden sm:block sm:my-5">
+              <button
+                class="text-background bg-primary py-4 px-7 rounded-lg text-sm outline outline-1 hover:outline-primary hover:text-primary hover:bg-background transition-colors duration-200 ease-in-out"
+              >
+                More Info
+              </button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="container mx-auto px-2 py-10 mt-4">
-        <div class="text-center mt-24 mb-6 sm:m-auto">
-          <h2 class="text-2xl font-semibold">Download the extension</h2>
-          <p class="py-3 px-3">
+      <section class="container mx-auto px-2 py-10 mt-4 sm:mt-52">
+        <div
+          class="text-center mt-24 mb-6 sm:m-auto flex items-center flex-col sm:max-w-[645px] sm:mx-auto"
+        >
+          <h2 class="text-2xl font-semibold sm:text-3xl">
+            Download the extension
+          </h2>
+          <p class="py-3 px-3 sm:text-xl opacity-50">
             We've got more browsers in the pipeline. Please do let us know if
             you've got a favourite you'd like us to prioritize
           </p>
         </div>
         <div
-          class="flex flex-col items-center justify-center gap-9 text-center"
+          class="flex flex-col items-center justify-center gap-9 text-center sm:flex-row sm:items-start sm:gap-8"
         >
           <div
-            class="flex flex-col items-center justify-center shadow-lg rounded-lg"
+            class="flex flex-col items-center justify-center shadow-lg rounded-lg sm:mt-10"
           >
             <img
               class="p-4 mt-9"
@@ -158,13 +183,13 @@
             </div>
             <img class="" src="./assets/images/bg-dots.svg" alt="" />
             <button
-              class="px-10 py-3.5 my-6 bg-primary text-background rounded-lg text-sm"
+              class="px-10 py-3.5 my-6 bg-primary text-background rounded-lg text-sm outline outline-1 hover:outline-primary hover:text-primary hover:bg-background transition-colors duration-200 ease-in-out"
             >
               Add & Install Extension
             </button>
           </div>
           <div
-            class="flex flex-col items-center justify-center shadow-lg rounded-lg"
+            class="flex flex-col items-center justify-center shadow-lg rounded-lg sm:mt-20"
           >
             <img
               class="p-4 mt-9"
@@ -177,110 +202,160 @@
             </div>
             <img class="" src="./assets/images/bg-dots.svg" alt="" />
             <button
-              class="px-10 py-3.5 my-6 bg-primary text-background rounded-lg text-sm"
+              class="px-10 py-3.5 my-6 bg-primary text-background rounded-lg text-sm outline outline-1 hover:outline-primary hover:text-primary hover:bg-background transition-colors duration-200 ease-in-out"
             >
               Add & Install Extension
             </button>
           </div>
           <div
-            class="flex flex-col items-center justify-center shadow-lg rounded-lg"
+            class="flex flex-col items-center justify-center shadow-lg rounded-lg sm:mt-32"
           >
             <img class="p-4 mt-9" src="./assets/images/logo-opera.svg" alt="" />
             <div class="pt-2 pb-4">
               <p class="p-2 text-xl font-semibold">Add to Opera</p>
-              <p class="px-2 pb-4">Minimum version 44</p>
+              <p class="px-2 pb-4">Minimum version 46</p>
             </div>
             <img class="" src="./assets/images/bg-dots.svg" alt="" />
             <button
-              class="px-10 py-3.5 my-6 bg-primary text-background rounded-lg text-sm"
+              class="px-10 py-3.5 my-6 bg-primary text-background rounded-lg text-sm outline outline-1 hover:outline-primary hover:text-primary hover:bg-background transition-colors duration-200 ease-in-out"
             >
               Add & Install Extension
             </button>
           </div>
         </div>
       </section>
-      <section class="container mx-auto px-2 py-10 mt-4">
-        <div class="text-center my-6">
-          <h2 class="text-2xl font-semibold px-4 py-4">
+      <section class="container mx-auto px-2 py-10 mt-4 sm:mt-7">
+        <div class="text-center my-6 sm:max-w-[645px] sm:mx-auto">
+          <h2 class="text-2xl font-semibold px-4 py-4 sm:text-3xl">
             Frequently Asked Questions
           </h2>
-          <p class="px-4">
+          <p class="px-4 sm:px-12 sm:py-4 sm:text-xl">
             Here are some of our FAQs. If you have any other questions you'd
             like answered please feel free to email us.
           </p>
         </div>
-        <div id="faq" class="p-6 flex flex-col justify-center gap-2">
-          <div class="flex items-center border-b-2 py-4">
-            <button class="flex w-full items-center justify-between">
+        <div
+          id="faq"
+          class="flex flex-col justify-center gap-2 sm:max-w-[600px] sm:mx-auto"
+        >
+          <div class="faq border-b-2 py-2 my-2">
+            <button
+              class="faq-btn flex w-full items-center justify-between hover:text-accent transition-colors duration-200"
+            >
               <span>What is Bookmark?</span>
-              <img src="./assets/images/icon-arrow.svg" alt="" />
+              <img
+                class="faq-arrow transition-transform duration-300"
+                src="./assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
-            <div class="hidden">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur, illum.
+
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p class="py-2 opacity-50">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
               </p>
             </div>
           </div>
-          <div class="flex items-center border-b-2 py-4">
-            <button class="flex w-full items-center justify-between">
+          <div class="faq border-b-2 py-2 my-2">
+            <button
+              class="faq-btn flex w-full items-center justify-between hover:text-accent transition-colors duration-200"
+            >
               <span>How can I request a new browser?</span>
-              <img src="./assets/images/icon-arrow.svg" alt="" />
+              <img
+                class="faq-arrow transition-transform duration-300"
+                src="./assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
-            <div class="hidden">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur, illum.
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p class="py-2 opacity-50">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
               </p>
             </div>
           </div>
-          <div class="flex items-center border-b-2 py-4">
-            <button class="flex w-full items-center justify-between">
+          <div class="faq border-b-2 py-2 my-2">
+            <button
+              class="faq-btn flex w-full items-center justify-between hover:text-accent transition-colors duration-200"
+            >
               <span>Is there a mobile app?</span>
-              <img src="./assets/images/icon-arrow.svg" alt="" />
+              <img
+                class="faq-arrow transition-transform duration-300"
+                src="./assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
-            <div class="hidden">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur, illum.
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p class="py-2 opacity-50">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
               </p>
             </div>
           </div>
-          <div class="flex items-center border-b-2 py-4">
-            <button class="flex w-full items-center justify-between">
+          <div class="faq border-b-2 py-2 my-2">
+            <button
+              class="faq-btn flex w-full items-center justify-between hover:text-accent transition-colors duration-200"
+            >
               <span>What about other chromium browsers?</span>
-              <img src="./assets/images/icon-arrow.svg" alt="" />
+              <img
+                class="faq-arrow transition-transform duration-300"
+                src="./assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
-            <div class="hidden">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur, illum.
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p class="py-2 opacity-50">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit.
               </p>
             </div>
           </div>
         </div>
         <div class="flex items-center justify-center text-lg my-6">
           <button
-            class="text-background bg-primary p-4 px-6 rounded-lg text-sm"
+            class="text-background bg-primary p-4 px-6 rounded-lg text-sm outline outline-1 hover:outline-primary hover:text-primary hover:bg-background transition-colors duration-200 ease-in-out"
           >
             More Info
           </button>
         </div>
       </section>
-      <section class="container mx-auto px-2 py-10 mt-14 bg-primary">
+      <section class="px-2 py-10 mt-14 bg-primary">
         <div
-          class="flex items-center flex-col justify-between text-background text-center py-4 px-6"
+          class="container mx-auto flex items-center flex-col justify-between text-background text-center py-4 px-6 my-6 sm:max-w-[450px] sm:mx-auto"
         >
           <p class="pt-3 uppercase tracking-[0.15em]">35.000+ Already Joined</p>
-          <h2 class="text-2xl">Stay up-to-date with what we're doing</h2>
-          <div class="flex justify-center items-center flex-col w-full">
+          <h2 class="text-2xl sm:text-3xl sm:my-10">
+            Stay up-to-date with what we're doing
+          </h2>
+          <div
+            class="flex justify-center items-center flex-col w-full sm:flex-row"
+          >
             <input
-              class="px-5 py-3 m-4 w-full rounded mt-7 mb-4"
+              class="px-5 py-3 m-4 w-full rounded mt-7 mb-4 sm:m-0 sm:mr-4"
               placeholder="Enter email here..."
               name="contact"
               type="text"
             />
-            <button class="bg-accent w-full p-7 py-3 rounded">
+            <button
+              class="bg-accent w-full p-7 py-3 rounded sm:w-[50%] hover:outline hover:outline-accent hover:text-accent hover:bg-background transition-colors duration-200 ease-in-out"
+            >
               Contact Us
             </button>
           </div>
@@ -289,20 +364,26 @@
     </main>
     <footer class="bg-primaryDark py-12">
       <nav
-        class="container mx-auto px-4 flex flex-col items-center justify-center"
+        class="container mx-auto px-4 flex flex-col items-center justify-center sm:flex-row sm:justify-between"
       >
-        <div>
+        <div class="flex justify-center items-center flex-col sm:flex-row">
           <img
-            class="w-full bg-white"
+            class="bg-white"
             src="./assets/images/logo-bookmark.svg"
             alt="logo bookmark"
           />
           <ul
-            class="text-background text-center uppercase py-4 tracking-widest"
+            class="text-background text-center uppercase py-4 tracking-widest sm:flex sm:gap-8 sm:py-0"
           >
-            <li class="p-3 mt-1"><a class="p-2" href="#">Features</a></li>
-            <li class="p-3 mt-1"><a class="p-2" href="#">Pricing</a></li>
-            <li class="p-3 mt-1"><a class="p-2" href="#">Contact</a></li>
+            <li class="p-3 mt-1 hover:text-accent">
+              <a class="p-2" href="#">Features</a>
+            </li>
+            <li class="p-3 mt-1 hover:text-accent">
+              <a class="p-2" href="#">Pricing</a>
+            </li>
+            <li class="p-3 mt-1 hover:text-accent">
+              <a class="p-2" href="#">Contact</a>
+            </li>
           </ul>
         </div>
         <div class="flex items-center justify-between mt-3">
